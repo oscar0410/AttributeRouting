@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace AttributeRouting.Controllers
 {
+    [Route("Home")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,15 +20,19 @@ namespace AttributeRouting.Controllers
         }
 
         [Route("")]
-        [Route("Home")]
-        [Route("Home/Index")]
+        [Route("Index")]
         public string Index()
         {
             return "Index() Action Method of HomeController";
         }
 
+        public ViewResult Privacy()
+        {
+            return View();
+        }
+
         // Path Variable
-        [Route("Home/Details/{id?}")]
+        [Route("Details/{id:int?}")]
         public string Details(int id)
         {
             return "Details() Action Method of HomeController, ID Value = " + id;
