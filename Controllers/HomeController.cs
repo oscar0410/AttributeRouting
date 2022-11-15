@@ -39,6 +39,12 @@ namespace AttributeRouting.Controllers
             return "Details() Action Method of HomeController, ID Value = " + id;
         }
 
+        [Route("~/About")]
+        public string About()
+        {
+            return "About() Action Method of HomeController";
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
