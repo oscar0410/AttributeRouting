@@ -20,6 +20,7 @@ namespace AttributeRouting.Controllers
         }
 
         [Route("")]
+        [Route("/")]
         [Route("Index")]
         public string Index()
         {
